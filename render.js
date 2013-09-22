@@ -37,13 +37,14 @@ var width = 900;
         {
           for (var j = 0; j < 3; j++) 
           {
-            sierpinskiCarpet(level -1 , length/3, {"x": coord.x + i/3 * length,"y": coord.y + j/3 * length });
+            if(!(i == 1 && j == 1))
+              sierpinskiCarpet(level -1 , length/3, {"x": coord.x + i/3 * length,"y": coord.y + j/3 * length });
           };
         } 
       }
    }
 
-   sierpinskiCarpet(5, width, {"x":0, "y":0});
+   sierpinskiCarpet(6, width, {"x":0, "y":0});
 
 
 function zoom() {
